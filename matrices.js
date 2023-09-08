@@ -61,7 +61,7 @@ let matriz = [
     for (let i = 0; i < matriz.length; i++) {
         suma += matriz[i][i]        
     }
-
+    
     return suma
  } 
 
@@ -72,8 +72,7 @@ let matriz = [
     let col = matriz.length
 
     for (let i = 0; i < matriz.length; i++) {
-        --col
-        suma += matriz[i][col]        
+        suma += matriz[i][--col]      
     }
 
     return suma

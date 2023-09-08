@@ -19,7 +19,7 @@ const loopDePares = (num) => {
 }
 
 let msj = loopDePares(3);
-console.log(msj)
+//console.log(msj)
 
 
 /**
@@ -39,7 +39,7 @@ const loopDeImpares = (num, palabra) => {
     }
 }
 
-console.log(loopDeImpares(4,"impar"))
+//console.log(loopDeImpares(4,"impar"))
 
 
 /**
@@ -56,7 +56,7 @@ const sumatoria = (num) => {
     return acumulador
 }
 
-console.log(sumatoria(4))
+//console.log(sumatoria(4))
 
 
 /**
@@ -74,6 +74,42 @@ const nuevoArreglo = num => {
 
     return arrayNuevo
 }
+
+
+/**
+ * Deberás crear una función llamada split que reciba un string y simule el comportamiento de la función original.
+ */
+
+const mySplitFn = (str,separator) => {
+    let strArray = []
+    let newWord = ""
+
+    while(str.length > 0){
+        itWasFounded = false
+
+        if(str.includes(separator)){
+            let index = str.indexOf(separator)
+            let value = str.substr(0,index)
+
+            strArray.push(value)
+            str = str.replace(value+separator,'')
+
+            itWasFounded = true
+        }
+
+        newWord = str
+        str = ""        
+    }
+
+    if(itWasFounded){
+        strArray.push(newWord.replace(separator,""))
+    }
+
+    return strArray
+}
+
+let arrayFromString = mySplitFn("holapomundopopo","po")
+console.log(arrayFromString)
 
 
 
