@@ -17,8 +17,8 @@ let alumnos = [
 let temp
 
 const ordenar = (arr, prop) => {
-    for (let i = 0; i < arr.length; i++) {
-        for (let j = 0; j < arr.length -1; j++) {
+    for (let i = 0; i < arr.length - 1; i++) {
+        for (let j = 0; j < arr.length -1 - i; j++) {
             if (prop) {
                 if (arr[j][prop] > arr[j+1][prop]) {
                     temp = arr[j]
